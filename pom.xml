@@ -104,6 +104,7 @@
 
     <modules>
         <module>web-flux</module>
+        <module>base</module>
     </modules>
     
     <packaging>pom</packaging>
