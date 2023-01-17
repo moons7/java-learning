@@ -134,7 +134,7 @@ public class BinaryTreeIteratorTest {
         Stack<TreeNode> stack = new Stack<>();
         stack.push(treeNode);
         while (!stack.empty()) {
-            treeNode = stack.pop(); //出栈的不一定是已经处理完的结点的根结点，所以需要null标识
+            treeNode = stack.pop(); //出栈的不一定是已经处理完的结点的根结点，所以需要一个特殊标识，此处为NULL
             if (treeNode != null) {
                 if (treeNode.right != null) {
                     stack.push(treeNode.right);
@@ -146,7 +146,7 @@ public class BinaryTreeIteratorTest {
                 stack.push(null); //该标记根结点
             } else { //遇到根结点则再次出栈
                 treeNode = stack.pop();
-                System.out.print(treeNode.value + " "); //遍历算法本质上以栈顺序打印根结点
+                System.out.print(treeNode.value + " "); //二叉树遍历算法本质上以特点顺序打印根结点
             }
         }
     }
